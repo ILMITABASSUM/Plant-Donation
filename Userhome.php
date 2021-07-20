@@ -49,7 +49,10 @@ session_start();
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="RegisterInfo.php">Account Info</a>
+        <a class="nav-link" href="userProfile.php">User Profile</a>
+     </li>
+     <li class="nav-item">
+        <a class="nav-link" href="usersProfile.php">User Profile</a>
      </li>
       <li class="nav-item">
         <a class="nav-link" href="logout.php">Sign Out</a>

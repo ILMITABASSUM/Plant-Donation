@@ -14,7 +14,7 @@
                <div class="field">
                   <span class="fa fa-user"></span>
                   <!-- <input type="text" required placeholder="Email or Phone"> -->
-                  <input type ="text" name ="email" autocomplete= "off" required placeholder="Emaillll">
+                  <input type ="text" name ="email" autocomplete= "off" required placeholder="Email">
                </div>
                <div class="field space">
                   <span class="fa fa-lock"></span>
