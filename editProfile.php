@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +30,7 @@
         <a class="nav-link" href="userhome.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-      <a class="nav-link" href="editProfile.php">Edit Profile</a>
+      <a class="nav-link" href="usersProfile.php">Users Profile</a>
         
 
       <li class="nav-item">
@@ -47,7 +51,7 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <div class="container emp-profile">
-<p> <label><h1 style ="text-align:center;">My Profile</h1>  </p>
+<p> <label><h1 style ="text-align:center;">Edit Your Profile</h1>  </p>
             <form method="post">
                 <div class="row">
                     <div class="call-sm-12 col-md-4 col-lg-4 col-12">
@@ -57,19 +61,8 @@
                                 Change Photo
                                 <input type="file" name="file"/>
                             </div>
-                           <p> Tell us something about Yourself <p>
-                               <hr>
-                               <center>
-                                   <textarea rows = "4" cols ="30" onkeypress = "auto_grow(this);" onkeyup="auto_grow(this);"
-                                   style="margin-top:20px; resize:none; overflow: hidden;"></textarea>
-                                </center>
-<script type = "text/javascript">
-function auto_grow(element){
-    element.style.height = "5px";
-    element.style.height = (element.scrollHeight)+"px";
-
-}
-</script>
+                           <p>Please submit your information<p>
+                           <a class="btn btn-info nav-success" type = "button" >Submit</a>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -83,7 +76,7 @@ function auto_grow(element){
                                 </li>
                                 <li class="navbar-nav ml-auto">
                                
-                                    <a class="btn btn-info nav-info" type = "button" href="editProfile.php">Edit Profile</a>
+                                    <a class="btn btn-info nav-info" type = "button" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Edit Profile</a>
                                 </li>
 </ul>
             <div class="col-md-8">
@@ -96,89 +89,79 @@ function auto_grow(element){
                                             </div>
                                             <div class="col-md-6">
                                                 
-                                            <!-- </div>
+                                            </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label>Username : </label>
+                                            </div>
+                                            <div class="col-md-6">
+                                            <input type ="text" name ="username" autocomplete= "off" placeholder="Username">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label>Name : </label>
                                             </div>
+                                            <div class="col-md-6">
+                                            <input type ="text" name ="name" autocomplete= "off" placeholder="Your Name">
+                                            </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label>Email : </label>
                                             </div>
-                                          
+                                            <div class="col-md-6">
+                                            <input type ="text" name ="email" autocomplete= "off" placeholder="Email">
+                                            </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label>Date Of Brith : </label>
+                                            </div>
+                                            <div class="col-md-6">
+                                            <input type ="text" name ="date" autocomplete= "off" placeholder="Date of Brith">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label>Address : </label>
                                             </div>
+                                            <div class="col-md-6">
+                                            <input type ="text" name ="address" autocomplete= "off" placeholder="Address">
+                                            </div>
                                                 </div>
                                             <div class="row">
                                             <div class="col-md-6">
                                                 <label>Country : </label>
+                                            </div>
+                                            <div class="col-md-6">
+                                            <input type ="text" name ="country" autocomplete= "off" placeholder="Country">
                                             </div>
                                         </div>
                                             <div class="row">
                                             <div class="col-md-6">
                                                 <label>Gender :</label>
                                             </div>
-                                        </div > -->
-
-
-  <thread>
- 
-  <th>Username : </th> <br>
-  <th>Name : </th> <br>
-  <th>Email :</th> <br>
-  <th>Date Of Brith :</th> <br>
-  <th>Address :</th> <br>
-  <th> Country :</th> <br>
-  <th> Gender :</th> </br>
+                                            <div class="col-md-6">
+                                            <input type ="text" name ="gender" autocomplete= "off" placeholder="Gender">
+                                            </div>
+                                        </div >
+                                        <thread>
+  <th>Firstname </th>
+  <th>Lastname </th>
+  <th>Email </th>
+  <th>Country</th>
+  <th>Contact Number</th>
+  <th>Profile Picture </th>
 </thread>
 
 
-<!-- <?php
+<?php
 $conn = mysqli_connect("localhost", "root", "WhateverPassword");
 mysqli_select_db($conn,'test');
 $sex=$_SESSION['email'];
 $sql = "SELECT * FROM registerdata WHERE email = '$sex'";
-$result = mysqli_query($conn, $sql);
-  while($row = mysqli_fetch_array($result)) {
-  // echo "". $row["firstname"]. " " . $row["lastname"]. " " . $row["email"]. " " . $row["country"]. " " . $row["phone"]. " " . $row["image"]."<br>"; 
- ?> 
-<tr>
-<td><?php echo $row['firstname']; ?> </td>
-<td><?php echo $row['lastname']; ?> </td>
-<td><?php echo $row['email']; ?> </td>
-<td><?php echo $row['country']; ?> </td>
-<td><?php echo $row['phone']; ?> </td>
-<td><img src ="<?php echo $row['image']; ?>" width="70" height="70"> </td>
-</tr>
-</table>
-</div>
-<?php
-  }
-$conn->close();
-?>
-
-
-
-<?php
-$conn = mysqli_connect("localhost", "root", "WhateverPassword");
-mysqli_select_db($conn,'registerationform');
-$sex=$_SESSION['email'];
-$sql = "SELECT * FROM signup WHERE email = '$sex'";
 $result = mysqli_query($conn, $sql);
   while($row = mysqli_fetch_array($result)) {
   // echo "". $row["firstname"]. " " . $row["lastname"]. " " . $row["email"]. " " . $row["country"]. " " . $row["phone"]. " " . $row["image"]."<br>"; 
@@ -229,4 +212,4 @@ $result = mysqli_query($conn, $sql);
 <?php
   }
 $conn->close();
-?> -->
+?>

@@ -48,9 +48,9 @@ session_start();
         <a class="nav-link" href="donate.php">Donate</a>
       </li>
 
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="userProfile.php">User Profile</a>
-     </li>
+     </li> -->
      <li class="nav-item">
         <a class="nav-link" href="usersProfile.php">User Profile</a>
      </li>
