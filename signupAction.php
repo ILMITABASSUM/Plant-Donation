@@ -6,7 +6,7 @@ if($conn){
 }else{
     echo " NoConnection";
 }
-mysqli_select_db($conn,'registerationform');
+mysqli_select_db($conn,'registrationform');
 $username = $_POST['username'];
 $email = $_POST['email'];
 $password = $_POST['password'];

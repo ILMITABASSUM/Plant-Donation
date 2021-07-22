@@ -46,7 +46,7 @@
       <a class="nav-link" href="Services.php">Services</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="signUp.php">SignIn</a>
+        <a class="nav-link" href="signUp.php">SignUp</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="AccountUpdate.php">Account Settings</a>
