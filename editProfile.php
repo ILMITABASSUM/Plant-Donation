@@ -35,10 +35,7 @@
       <li class="nav-item">
         <a class="nav-link" href="logout.php">Log Out</a>
       </li>
-    
-    
-    </form>
-  </div>
+      </div>
 </nav>
 
 <section class ="my-5">
@@ -55,38 +52,38 @@ echo' Not a valid Email';
 }
 }
 ?>
-
-
-<form action="editProfileAction.php" method = "post">
-
 <div class="container emp-profile">
 <p> <label><h1 style ="text-align:center;">Edit Your Profile</h1>  </p>
             <form method="post">
                 <div class="row">
-                    <div class="call-sm-12 col-md-4 col-lg-4 col-12">
+                   
+         
+<form action="uploadimage.php" method = "post">
+<form method="post">    
+
+                  
+<div class="call-sm-12 col-md-4 col-lg-4 col-12">
                         <div class="profile-img">
                         <img class="card-img-top"src="images/3.PNG" alt="">
-                            <div class="file btn btn-lg btn-primary">
+                            <div class="file btn btn-lg btn-primary" type="submit" value="submit">
                                 Change Photo
-                                <input type="file" name="file"/>
+                                <input type="file" name="file" />
                             </div>
-                           <p>Tell something our yourself<p>
-                           <hr>
-                               <center>
-                                   <textarea rows = "4" cols ="30" onkeypress = "auto_grow(this);" onkeyup="auto_grow(this);"
-                                   style="margin-top:20px; resize:none; overflow: hidden;"></textarea>
-                                </center>
-<script type = "text/javascript">
-function auto_grow(element){
-    element.style.height = "5px";
-    element.style.height = (element.scrollHeight)+"px";
 
-}
-</script>
-                           <a class="btn btn-info nav-success" type = "button" >Submit</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
+                           <hr>
+</hr>
+                           </div>
+                            </div>
+
+                            </form>
+                            
+                     
+                            <form action="editProfileAction.php" method = "post">
+                            <form method="post">           
+<div>
+<div>
+<div class="row">
+                    <div>
                         <div class="profile-head">
                   <section class = " about my-5">
                       <div class = " container text">   
@@ -100,35 +97,31 @@ function auto_grow(element){
             <div class="col-md-8">
                         <div class="tab-content profile-tab" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                     
+                                       
+                                       
                                         <div class="row">
                                             <div class="col-md-6">
-                                            </div>
-                                                <label> </label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Username : </label>
+                                                <label><h6> Username :</h6></label>
                                             </div>
                                             <div class="col-md-6">
                                             <input type ="text" name ="username" autocomplete= "off" placeholder="Username">
                                             </div>
                                         </div>
+                                        <br>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>First Name : </label>
+                                                <label><h6>First Name:</h6></label>
                                             </div>
+                                            <br>
                                             <div class="col-md-6">
                                             <input type ="text" name ="firstName" autocomplete= "off" placeholder="First Name">
                                             </div>
                                         </div>
-
+                                    <br>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Last Name : </label>
+                                                <label><h6>Last Name:</h6></label>
                                             </div>
                                             <div class="col-md-6">
                                             <input type ="text" name ="lastName" autocomplete= "off" placeholder="Last Name">
@@ -137,7 +130,7 @@ function auto_grow(element){
 
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Contact No. : </label>
+                                                <label><h6>Contact No. : </label>
                                             </div>
                                             <div class="col-md-6">
                                             <input type ="phone" name ="contact" autocomplete= "off" placeholder="Contact No.">
@@ -146,31 +139,59 @@ function auto_grow(element){
 
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Date Of Brith : </label>
+                                                <label><h6>Date Of Brith: </label>
                                             </div>
                                             <div class="col-md-6">
                                             <input type ="date" name ="dob" autocomplete= "off" placeholder="Date of Brith">
                                             </div>
                                         </div>
+
+
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Address : </label>
-                                            </div>
-                                            <div class="col-md-6">
-                                            <input type ="text" name ="address" autocomplete= "off" placeholder="Address">
-                                            </div>
-                                                </div>
-                                            <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Country : </label>
+                                                <label><h6>Country: </label>
                                             </div>
                                             <div class="col-md-6">
                                             <input type ="text" name ="country" autocomplete= "off" placeholder="Country">
                                             </div>
                                         </div>
-                                           
-                                     <br>
-                               
 
-                                                <a class="btn btn-dark float-right" type = "button" >Submit</a>
-                                                </form>
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label><h6>Address: </label>
+                                            </div>
+                                            <div class="col-md-6">
+                                            <input type ="text" name ="address" autocomplete= "off" placeholder="Address">
+                                            </div>
+                                        </div>
+     
+                                  
+                                    <input class="btn btn-dark" type="submit" value="Submit">
+                                    </form>
+
+
+                                   <br>
+                                   <br> 
+
+                  
+
+                        <form action="descriptionAction.php" method = "post">
+                           <div class="row">
+                               
+                               <p>Tell Something About Yourself!<p>
+                               <div class ="count-container">
+                                    <div class= "input-group">
+                               <textarea type ="text" class ="input-control count-chars" id = "description" rows ="5" cols = "30" wrap = "on" maxlength = "101" data-max-chars ="101" name ="description" autocomplete= "off" placeholder="Your Story..."></textarea>
+                    <div class = "input-msg text-red"></div>
+</div>
+                <br>
+
+                      
+                              
+                                 <br>
+                            <input class="btn btn-info" type="submit" value="Submit">
+                            </div>
+                        </form>
+                        <script src="script.js"></script>
+</body>

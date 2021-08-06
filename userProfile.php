@@ -37,7 +37,7 @@ session_start();
         <a class="nav-link" href="SignIn.php">Donate</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="SignIn.php">Log Out</a>
+        <a class="nav-link" href="logout.php">Log Out</a>
       </li>
     
     
@@ -62,7 +62,19 @@ session_start();
                                 <input type="file" name="file"/>
                             </div>
                            <p><b> Tell us something about Yourself </b></p>
-                           <p><i>"Hi! I am a conservationist! I am joining to donate and be a member of this community.."</i></p>
+<?php
+$conn = mysqli_connect("localhost", "root", "WhateverPassword");
+mysqli_select_db($conn,'registrationform');
+$mail=$_SESSION['email'];
+$sql = "SELECT * FROM signup WHERE email = '$mail'";
+$result = mysqli_query($conn, $sql);
+  while($row = mysqli_fetch_array($result)) {
+ ?> 
+<p><i><?php echo $row['description']; ?> </i></p>
+<?php
+  }
+  $conn->close();
+?>
          </div>
                     </div>
                     <div class="col-md-6">
@@ -101,23 +113,24 @@ session_start();
   <th> Gender :   </th> <br>
   <th> City  :   </th> <br>
   <th> Phone Number : </th>
+ 
 </thread>
 
 
 <?php
 $conn = mysqli_connect("localhost", "root", "WhateverPassword");
 mysqli_select_db($conn,'registrationform');
-$sex=$_SESSION['email'];
-$sql = "SELECT * FROM signup WHERE email = '$sex'";
+$mail=$_SESSION['email'];
+$sql = "SELECT * FROM signup WHERE email = '$mail'";
 $result = mysqli_query($conn, $sql);
   while($row = mysqli_fetch_array($result)) {
-//  echo "Username : ".  $row["username"]. "<br> Email : " . $row["email"]. "Date of Birth : " .$row["date"]. "<br> Country :" . $row["country"]. "Address :" . $row["address"]. "Gender :" . $row["gender"]."<br>"; 
  ?> 
 <tr>
 <div class="col-md-6">
 <td> <?php echo $row['username']; ?> </td> <br>
 <td> <?php echo $row['firstName']; ?> </td> <br>
 <td><?php echo $row['email']; ?> </td> <br>
+
 <td><?php echo $row['dob']; ?> </td> <br>
 <td><?php echo $row['address']; ?> </td> <br>
 <td><?php echo $row['country']; ?> </td> <br>
@@ -132,4 +145,3 @@ $result = mysqli_query($conn, $sql);
   }
 $conn->close();
 ?>
-

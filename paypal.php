@@ -30,11 +30,9 @@
       </li>
       <li class="nav-item">
       <a class="nav-link" href="userProfile.php">User Profile</a>
-        
+</li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="SignIn.php">Donate</a>
-      </li>
+
       <li class="nav-item">
         <a class="nav-link" href="logout.php">Log Out</a>
       </li>
@@ -46,21 +44,20 @@
 <div class="container">
 
 
-
-	</aside> <!-- col.// -->
-	<aside class="col-sm-12">
-	<p algin =center><img src="images/TK1.png" height = 200%,  width = 50% ></p>
+<aside class="col-sm-12">
+	<p align = center ><img src="images/TK1.png" height = 100%,  width = 50% ></p>
 
 
+  
 <article class="card">
 <div class="card-body p-5">
 
 <ul class="nav bg-light nav-pills rounded nav-fill mb-3" role="tablist">
 	<li class="nav-item">
-		<a class="btn btn-info nav-info" data-toggle="pill" href="#nav-tab-card">
+		<a class="btn btn-info nav-info" data-toggle="pill" href="donate.php">
 		<i class="fa fa-credit-card"></i> Credit Card</a></li>
 	<li class="nav-item">
-		<a class="btn btn-success nav-success" data-toggle="pill" href="paypal.php">
+		<a class="btn btn-success nav-success" data-toggle="pill">
 		<i class="fab fa-paypal nav-info"></i>  Paypal</a></li>
 	<li class="nav-item">
 		<a class="btn btn-info nav-info" data-toggle="pill" href="bkash.php">
@@ -70,23 +67,20 @@
 <div class="tab-content">
 <div class="tab-pane fade show active" id="nav-tab-card">
 
-	<form role="form">
-	<form action="buy.php" method = "post" class="was-validated">		
 
-	<div class="form-group">
-		<label for="cardNumber">Card number</label>
-		<div class="input-group">
-			<input type="text" class="form-control" name="cardNumber" placeholder="">
-			<div class="input-group-append">
-				<span class="input-group-text text-muted">
-					<i class="fab fa-cc-visa"></i>   <i class="fab fa-cc-amex"></i>   
-					<i class="fab fa-cc-mastercard"></i> 
-				</span>
-			</div>
-		</div>
-	</div> <!-- form-group.// -->
+<div class="form-group">
 
-				<div class="row">
+<div class="form-group">
+<label for="cardNumber">Card number</label>
+<div class="input-group">
+	<div class="input-group-prepend">
+		<span class="input-group-text"><i class="fa fa-credit-card"></i></span>
+	</div>
+	<input type="text" class="form-control" name="cardNumber" placeholder="">
+</div> 
+</div> 
+
+<div class="row">
     <div class="col-sm-8">
         <div class="form-group">
             <label><span class="hidden-xs">Expiration</span> </label>
@@ -114,7 +108,7 @@
 				  <option>2019</option>
 				  <option>2018</option>
 				</select>
-				</div>
+        	</div>
         </div>
     </div>
     <div class="col-sm-4">

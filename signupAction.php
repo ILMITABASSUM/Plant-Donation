@@ -2,23 +2,24 @@
 $conn = mysqli_connect("localhost", "root", "WhateverPassword");
 
 if($conn){
-    echo "Connection success";
+    echo "Connection Successful";
 }else{
-    echo " NoConnection";
+    echo "No Connection";
 }
 mysqli_select_db($conn,'registrationform');
 $username = $_POST['username'];
-$email = $_POST['email'];
+$email =$_POST['email'];
 $password = $_POST['password'];
+
 $date = $_POST['date'];
 $address = $_POST['address'];
 $country = $_POST['country'];
 $gender = $_POST['gender'];
 
-$query = "insert into signup(username, email, password, date, address, country, gender)
-values('$username','$email', '$password', '$date' , '$address', '$country', '$gender') ";
 
 
+$query = "insert into signup(username, email, password, address, country, gender)
+values('$username','$email', '$password', '$address', '$country', '$gender') ";
 
 
 echo "$query";

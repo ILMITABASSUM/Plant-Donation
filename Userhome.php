@@ -44,18 +44,22 @@ session_start();
       </li> -->
 
       
-      <li class="nav-item">
-        <a class="nav-link" href="donate.php">Donate</a>
-      </li>
+   
 
       <!-- <li class="nav-item">
         <a class="nav-link" href="userProfile.php">User Profile</a>
      </li> -->
+
      <li class="nav-item">
         <a class="nav-link" href="userProfile.php">User Profile</a>
      </li>
+
+     
+     <li class="nav-item">
+        <a class="nav-link" href="buyCoins.php">Buy Coins</a>
+      </li>
       <li class="nav-item">
-        <a class="nav-link" href="logout.php">Sign Out</a>
+        <a class="nav-link" href="logout.php"> Log Out</a>
      </li>
 
     </ul>

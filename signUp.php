@@ -1,4 +1,3 @@
-  
 <html lang="en" dir="ltr">
    <head>
       <meta charset="utf-8">
@@ -25,17 +24,17 @@
             </div>
             <div class="field space">
                   <span class="fa fa-lock"></span>
-                  <input type="pwd" name="password" class="pass-key" required placeholder="Password">
+                  <input type="pwd" name="password" class="pass-key"   required placeholder="Password">
+      
+
                   <span class="show">SHOW</span>
                </div>
                
                <div class="field space">
                <span class="fa fa-globe-asia"><i class = "glyphicon-glyphicon-chevron-down"></i></span>
-               <select name="country" class  = "form-control input-md" required placeholder="Country">
+                    <select name="country" class  = "form-control input-md" required placeholder="Country">
                     <option value="">Select Country</option>
-
-                
-                 <option value="Afghanistan">Afghanistan</option>
+                    <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
                 <option value="Albania">Albania</option>
                 <option value="Algeria">Algeria</option>
@@ -45,7 +44,6 @@
             
                 <option value="Australia">Australia</option>
                 <option value="Austria">Austria</option>
-
                 <option value="Bangladesh">Bangladesh</option>
                
                 <option value="Belgium">Belgium</option>
@@ -127,7 +125,7 @@
                 <option value="Taiwan">Taiwan</option>
              
                 <option value="Turkey">Turkey</option>
-             >
+             
                 <option value="United Arab Emirates">United Arab Emirates</option>
                 <option value="United Kingdom">United Kingdom</option>
                 <option value="United States">United States</option>
@@ -136,8 +134,10 @@
                 <option value="Zambia">Zambia</option>
                 <option value="Zimbabwe">Zimbabwe</option>  
 
-</select>
-</div>
+                
+                    </select>   
+                                      
+               </div>
          <div class="field space">
                 <span class="fas fa-venus-mars"></span>
                 <select  class  = "form-control input-md" name="gender" required placeholder="Gender">

@@ -40,7 +40,7 @@ body{
   color: #333;
 }
 .profile-head h6{
-  color: #0062cc;
+  color: #00ccc2;
 }
 .profile-edit-btn{
   border: none;
@@ -97,4 +97,111 @@ body{
 .profile-tab p{
   font-weight: 600;
   color: #0062cc;
+}
+
+
+
+
+
+input,textarea{
+	font-family: sans-serif;
+}
+*{
+	box-sizing: border-box;
+	margin:0;
+	outline: none;
+}
+
+.count-container form{
+	max-width: 700px;
+	margin:auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+.count-container form .input-group{
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.count-container form textarea.input-control{
+	height: 140px;
+}
+.count-container form .input-msg{
+	font-size: 18px;
+	padding-top: 10px;
+}
+.text-red{
+	color: red;
+}
+.text-orange{
+	color: orange;
+}
+
+
+
+
+
+
+
+.emp-profile{
+  padding: 3%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+.profile-img{
+  text-align: center;
+}
+.profile-img img{
+  width: 70%;
+  height: 100%;
+}
+.profile-img .file {
+  position: relative;
+  overflow: hidden;
+  margin-top: -20%;
+  width: 70%;
+  border: none;
+  border-radius: 0;
+  font-size: 15px;
+  background: #212529b8;
+}
+.profile-img .file input {
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  top: 0;
+}
+
+
+/*  */
+.icon,
+.text {
+  vertical-align: right;
+  display: inline-block;
+}
+
+
+
+#hello:hover {
+  letter-spacing: 0.8em;
+  background-color: #ec6072;
+}
+
+#hello {
+  color: #1e1f1c;
+}
+button {
+  height: 4em;
+  width: 20%;
+  padding: 1.5em auto;
+  margin: 1em auto;
+  background-color: #0b98da;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  transition: all 0.2s cubic-bezier(.4,0,.2,1);
+ 
 }

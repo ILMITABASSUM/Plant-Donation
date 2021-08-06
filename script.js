@@ -1,18 +1,19 @@
-const form = document.querySelector("form"),
-eInput = form.querySelector(".input"),
-text = form.querySelector(".text");
 
-form.addEventListener("submit", (e)=>{
-  e.preventDefault(); //preventing form from submitting
-  let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; //Regex pattern to validate email
-  form.classList.add("error");
-  form.classList.remove("valid");
-  if(eInput.value == ""){
-    text.innerText = "Email can't be blank";
-  }else if (!eInput.value.match(pattern) ) { //if patter is not matched with user's enter value
-    text.innerText = "Please enter a valid email";
-  }else{
-    form.classList.replace("error" , "valid"); //replacing error class with valid class
-    text.innerText = "This is a valid email";
-  }
-});
+(function(){
+  document.addEventListener("keyup", function(event){
+    if(event.target.matches(".count-chars")){
+      // get input value and length
+      const value = event.target.value;
+      const valueLength = event.target.value.length;
+      // get data value
+      const maxChars = parseInt(event.target.getAttribute("data-max-chars"));
+      const remainingChars = maxChars - valueLength;
+      if(valueLength > maxChars){
+        // limit chars to maxChars
+        event.target.value = value.substr(0, maxChars);
+        return;  //end function execution
+      }
+      event.target.nextElementSibling.innerHTML = remainingChars + " characters remaining";
+    }
+  })
+})();
