@@ -1,67 +1,39 @@
-<?php
-session_start();
+<?php 
+    include_once 'userheader.php'
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-     <title></title>
-     <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="view/styles.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-  </head>
-  <body>
-  
-<!-- navBar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="welcome.php">Save Plant Save Planet</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="userhome.php">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-      <a class="nav-link" href="editProfile.php">Edit Profile</a>
-        
-
-      <li class="nav-item">
-        <a class="nav-link" href="SignIn.php">Donate</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="logout.php">Log Out</a>
-      </li>
-    
-    
-    </form>
-  </div>
-</nav>
 
 <section class ="my-5">
   <div class="py-5">
 
-<!------ Include the above in your HEAD tag ---------->
+
 
 <div class="container emp-profile">
+<div class="col-sm-6 col-md-12 col-lg-12 col-12">
 <p> <label><h1 style ="text-align:center;">My Profile</h1>  </p>
             <form method="post">
                 <div class="row">
-                    <div class="call-sm-12 col-md-4 col-lg-4 col-12">
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-12">
                         <div class="profile-img">
-                        <img class="card-img-top"src="images/3.PNG" alt="">
-                            <div class="file btn btn-lg btn-primary">
-                                Change Photo
-                                <input type="file" name="file"/>
-                            </div>
-                           <p><b> Tell us something about Yourself </b></p>
+                        <?php
+$conn = mysqli_connect("localhost", "root", "WhateverPassword");
+mysqli_select_db($conn,'registrationform');
+$mail=$_SESSION['email'];
+$sql = "SELECT * FROM signup WHERE email = '$mail'";
+$result = mysqli_query($conn, $sql);
+  while($row = mysqli_fetch_array($result)) {
+ ?> 
+  <img class="card-img-top"src="<?php echo $row['image']; ?>" alt="">
+<?php
+  }
+  $conn->close();
+?>
+
+<div>
+  
+</div>
+
+  <p><b> Tell us something about Yourself </b></p>
 <?php
 $conn = mysqli_connect("localhost", "root", "WhateverPassword");
 mysqli_select_db($conn,'registrationform');
@@ -75,6 +47,7 @@ $result = mysqli_query($conn, $sql);
   }
   $conn->close();
 ?>
+  
          </div>
                     </div>
                     <div class="col-md-6">
@@ -102,17 +75,18 @@ $result = mysqli_query($conn, $sql);
 
   <br>
   
-    
+
   <thread>
   <th>Username : </th> <br>
-  <th>Name :   </th> <br>
+  <th>First Name :   </th> <br>
+  <th>Last Name :   </th> <br>
   <th>Email :   </th> <br>
   <th>Date Of Brith   : </th> <br>
-  <th>Address   :   </th> <br>
   <th> Country :   </th> <br>
   <th> Gender :   </th> <br>
   <th> City  :   </th> <br>
   <th> Phone Number : </th>
+
  
 </thread>
 
@@ -126,17 +100,17 @@ $result = mysqli_query($conn, $sql);
   while($row = mysqli_fetch_array($result)) {
  ?> 
 <tr>
-<div class="col-md-6">
-<td> <?php echo $row['username']; ?> </td> <br>
-<td> <?php echo $row['firstName']; ?> </td> <br>
-<td><?php echo $row['email']; ?> </td> <br>
 
-<td><?php echo $row['dob']; ?> </td> <br>
-<td><?php echo $row['address']; ?> </td> <br>
+<td> <h7 style ="text-align:right;"><?php echo $row['username']; ?> </td> <br>
+<td> <?php echo $row['firstName']; ?> </td> <br>
+<td> <?php echo $row['lastName']; ?> </td> <br>
+<td><?php echo $row['email']; ?> </td> <br>
+<td><?php echo $row['dob']; ?></td> <br>
 <td><?php echo $row['country']; ?> </td> <br>
 <td><?php echo $row['gender']; ?> </td> <br>
 <td><?php echo $row['address']; ?> </td> <br>
 <td><?php echo $row['phoneNumber']; ?> </td> <br>
+
 
 </tr>
 </table>

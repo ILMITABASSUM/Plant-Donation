@@ -11,21 +11,19 @@ $username = $_POST['username'];
 $email =$_POST['email'];
 $password = $_POST['password'];
 
-$date = $_POST['date'];
-$address = $_POST['address'];
 $country = $_POST['country'];
 $gender = $_POST['gender'];
 
 
 
-$query = "insert into signup(username, email, password, address, country, gender)
-values('$username','$email', '$password', '$address', '$country', '$gender') ";
+$query = "insert into signup(username, email, password,  country, gender)
+values('$username','$email', '$password', '$country', '$gender') ";
 
 
-echo "$query";
+ echo "$query";
 
-mysqli_query($conn,$query);
+ mysqli_query($conn,$query);
 
- header('location:logIn.php');
+ header('location:../view/logIn.php');
 
 ?>

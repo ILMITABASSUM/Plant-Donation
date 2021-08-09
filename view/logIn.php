@@ -1,8 +1,9 @@
+
 <html lang="en" dir="ltr">
    <head>
       <meta charset="utf-8">
       <title> Login Form</title>
-      <link rel="stylesheet" type="text/css" href="view/style.css">
+      <link rel="stylesheet" type="text/css" href="style.css">
      
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
    </head>
@@ -10,7 +11,7 @@
       <div class="bg-img">
          <div class="content">
             <header>Login Form</header>
-            <form action="validation.php" method = "post" class="was-validated">
+            <form action="../controller/validation.php" method = "post" class="was-validated">
                <div class="field">
                   <span class="fa fa-user"></span>
                   <!-- <input type="text" required placeholder="Email or Phone"> -->
@@ -31,7 +32,7 @@
             
             <div class="LogIn">
                Don't have an account?
-               <a href="signUp.php">Signup Now</a>
+               <a class="btn btn-success" type = "button" href="signUp.php">SignUp</a>
             </div>
          </div>
       </div>

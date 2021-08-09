@@ -18,7 +18,7 @@ echo "$query";
 
 mysqli_query($conn,$query);
 
-header('location:userProfile.php');
+header('location:../view/userProfile.php');
 
 
 ?>
