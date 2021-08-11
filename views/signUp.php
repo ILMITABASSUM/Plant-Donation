@@ -1,8 +1,16 @@
+<?php
+define('BASEPATH', true); //access connection script if you omit this line file will be blank
+require '../model/db.php'; //require connection script
+
+
+?>
+
+
 <html lang="en" dir="ltr">
    <head>
       <meta charset="utf-8">
       <title>SignUp Form</title>
-      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -13,7 +21,7 @@
       <div class="bg-img">
          <div class="content">
             <header>SignUp Form</header>
-            <form action="../controller/signUpAction.php" method = "post">
+            <form action="../model/SignUpdatabase.php" method = "post">
             <div class="field">
                   <span class="fa fa-user"></span>
                   <input type="text" name ="username" autocomplete= "off" required placeholder="Username">
