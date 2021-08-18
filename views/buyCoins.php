@@ -1,26 +1,22 @@
 <?php 
-    include_once 'userheader.php'
+    include_once 'includes/userHeader.php'
 ?>
 
-<!DOCTYPE html>
-<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/buystyle.css">
 
 
-
-<!------ Include the above in your HEAD tag ---------->
-<?php
-if(isset($_POST['email']) == true &&  ($_POST['email']) == false){
-$email = $_POST['email'];
-if(filer_var( $email, FILTER_VALIDATE_EMAIL) ==true){
-echo ' That is a valid email address';
-}else{
-echo' Not a valid Email';
-}
-}
-?>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
 <p> <label><h5 style ="text-align:center;">BUY COINS</h5>  </p>
-            <form method="post">
+        
              
 
 

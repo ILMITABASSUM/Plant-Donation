@@ -1,101 +1,91 @@
 <?php 
-    include_once 'header.php'
+    include_once './includes/header.php'
 ?>
 
-<div id="demo" class="carousel slide" data-ride="carousel">
+    <section class="home">
+      <video class="video-slide active" src="1.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="2.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="3.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="4.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="5.mp4" autoplay muted loop></video>
+      <div class="content active">
+        <h1>We Can<br><span>Save Plant Save Planet!</span></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="signup.php">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Donate Money<br><span>Buy Coins!</span></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>View Plant Feed<br><span></span></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>We can<br><span>Bring Change Together</span></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Feel Nature.<br><span>Relax</span></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
 
-  <!-- Indicators -->
-  <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
-    <li data-target="#demo" data-slide-to="3"></li>
-  </ul>
-  
-  <!-- The slideshow -->
-  <div class="carousel-inner">
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
 
-    <div class="carousel-item active">
-      <img src="images/1.png" alt="pink" width="1500" height="500">
-    </div>
-    <div class="carousel-item">
-      <img src="images/2.png" alt="sam" width="1500" height="500">
-</div>
-</div>
-     
-    <!-- <div class="carousel-item">
-      <img src="images/mesu.jpg" alt="York" width="1000" height="100">
-    </div>
-    <div class="carousel-item">
-      <img src="images/Ahsan.jpg" alt="New York" width="1000" height="100">
-    </div>
-  </div> -->
-  
-  <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
 
-</div>
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
 
-<!-- NewFeed -->
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
 
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
 
-<!-- Form Creation -->
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
 
-<section class ="my-5">
-  <div class="py-5">
-    <h3 class ="text-center"> Contact Us </h3>
-</div> 
-<div class ="w-50 m-auto">
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
 
-<form action="userinfo.php" method = "post">
-<div class = "form-group">
-<label for = "user">UserName</label>
-<input type ="text" name ="user" autocomplete= "off" class="form-control">
-</input>
-<div class="form-row">
-    <div class="form-group col-md-6">
-      <label>Email</label>
-      <input type ="text" name ="email" autocomplete= "off" class="form-control">
-    </div>
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
 
-
-
-    <form class="form-inline">
-  <div class="form-group">
-    <label>Password</label>
-    <input type="txt" name="pass" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
-    <small id="passwordHelpInline" class="text-muted">
-      <p>Must be 8-20 characters long.</p>
-    </small>
-  </div>
-</form>
-
-    <div class = "form-group">
-<label>Comment</label>
-
-<input type="text" name ="comment" autocomplete= "off"  placeholder="Please give us feedback" class="form-control" > </input>
-<small id="CommentHelpInline" class="text-muted">
-No Hate speech</small>
-</div>
-</div>
-
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-      <label class="form-check-label" for="invalidCheck2" >
-        Agree to terms and conditions
-        <button class="btn btn-success" type="submit">Submit form</button>
-      </label>
-    </div>
-
-
-
-</div>
-</form>
-</div>
-</section>
-
+  </body>
+</html>

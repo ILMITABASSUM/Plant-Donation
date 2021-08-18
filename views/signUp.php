@@ -1,46 +1,51 @@
-<?php
-define('BASEPATH', true); //access connection script if you omit this line file will be blank
-require '../model/db.php'; //require connection script
-
-
+<?php 
+    
+    include_once '../helpers/session_helper.php';
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 
 
-<html lang="en" dir="ltr">
-   <head>
-      <meta charset="utf-8">
-      <title>SignUp Form</title>
-      <link rel="stylesheet" type="text/css" href="css/style.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-   </head>
-   <body>
-      <div class="bg-img">
-         <div class="content">
-            <header>SignUp Form</header>
-            <form action="../model/SignUpdatabase.php" method = "post">
-            <div class="field">
-                  <span class="fa fa-user"></span>
-                  <input type="text" name ="username" autocomplete= "off" required placeholder="Username">
-               </div> 
-               <div class="field space">
-               <span class="fas fa-envelope-open-text"></span>
-               <input type="email" name ="email" autocomplete= "off" required placeholder="Email">
-            </div>
-            <div class="field space">
-                  <span class="fa fa-lock"></span>
-                  <input type="pwd" name="password" class="pass-key"   required placeholder="Password">
-      
+</head>
+  
+<body>
+<div class="col-sm-6 col-md-12 col-lg-12 col-12">
+<div class="bg-img">
+<div class="content">
+<h3 class="header"> Signup</h3>
+<br>
+    <?php flash('register') ?>
+   
+    <form method="post" class="form-inline" action="../controllers/Users.php">
+        <input type="hidden" name="type" value="register">
+       
+        <div class="field">
+      <span class="fa fa-user"></span>
+        <input type="text" name="usersName" autocomplete= "off" placeholder="Full name" >
+</div>
+        <div class="field space">
+        <span class="fas fa-envelope-open-text"></span>
+        <input type="text" name="usersEmail" autocomplete= "off"
+        placeholder="Email">
+</div>
 
-                  <span class="show">SHOW</span>
-               </div>
-               
-               <div class="field space">
+<div class="field space">
+<span class="fa fa-user"></span>
+        <input type="text" name="usersUid"  placeholder="Username">
+</div>
+
+<div class="field space">
                <span class="fa fa-globe-asia"><i class = "glyphicon-glyphicon-chevron-down"></i></span>
-                    <select name="country" class  = "form-control input-md" required placeholder="Country">
+                    <select name="usersCountry" class  = "form-control input-md" required >
                     <option value="">Select Country</option>
                     <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
@@ -142,33 +147,44 @@ require '../model/db.php'; //require connection script
                 <option value="Zambia">Zambia</option>
                 <option value="Zimbabwe">Zimbabwe</option>  
 
-                
                     </select>   
-                                      
-               </div>
-         <div class="field space">
+</div>        
+<div class="field space">
                 <span class="fas fa-venus-mars"></span>
-                <select  class  = "form-control input-md" name="gender" required placeholder="Gender">
+                <select class  = "form-control input-md" name  = "usersGender"  autocomplete= "off"  required >
                 <option value="">Select Gender</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
                 <option value="Others">Others</option>
                 </select>                
-                </div>
-   
-               <div class="field space">
-                  <input type="submit" value="Submit">
-               </div>
+              
+      
+</div>
+<div class="field space">
+                  <span class="fa fa-lock"></span> 
+        <input type="password" name="usersPwd" autocomplete= "off"  class="pass-key"
+        placeholder= " Password">
+        
+        <span class="show">SHOW</span>
+</div>
+<div>
+<div class="field space">
+                  <span class="fa fa-lock"></span> 
+        <input type="password" name="pwdRepeat" autocomplete= "off" class="pass-key"
+        placeholder="Repeat password">
+        <span class="show">SHOW</span>
+
+</div>
+
+<button type="submit" name="submit">Submit</button>
+</div>
             </form>
         
-          
-            <div class="signup">
-                <br>
                 Already have an account!
-               <a href="logIn.php">LogIn Now</a>
-            </br>
+                <button id="hello"><h5> <a href="login.php"> LogIn Now </h5></button></a>
+        
             </div>
-         </div>
+       
       </div>
       <script>
          const pass_field = document.querySelector('.pass-key');
@@ -183,9 +199,10 @@ require '../model/db.php'; //require connection script
             showBtn.textContent = "SHOW";
             showBtn.style.color = "#222";
           }
+          
          });
          
       </script>
+   
     </form>
-   </body>
-</html>
+ </html>

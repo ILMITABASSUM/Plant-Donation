@@ -1,29 +1,33 @@
 <?php 
-    include_once 'userheader.php'
+    include_once 'includes/userHeader.php';
+    include_once '../controllers/editProfileAction';
+
+
 ?>
 
+<head>
 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="./css/buystyle.css">
+    
 <section class ="my-5">
   <div class="py-5">
-
-
-
-<div class="container emp-profile">
-<div class="col-sm-6 col-md-12 col-lg-12 col-12">
+  <div class="container emp-profile">
 <p> <label><h1 style ="text-align:center;">My Profile</h1>  </p>
             <form method="post">
                 <div class="row">
-                    <div class="col-sm-12 col-md-4 col-lg-4 col-12">
+                    <div class="call-sm-12 col-md-4 col-lg-4 col-12">
                         <div class="profile-img">
                         <?php
 $conn = mysqli_connect("localhost", "root", "WhateverPassword");
-mysqli_select_db($conn,'registrationform');
+mysqli_select_db($conn,'registration-system');
 $mail=$_SESSION['email'];
 $sql = "SELECT * FROM signup WHERE email = '$mail'";
 $result = mysqli_query($conn, $sql);
   while($row = mysqli_fetch_array($result)) {
  ?> 
-  <img class="card-img-top"src="<?php echo $row['image']; ?>" alt="">
+                        <img class="card-img-top"src="<?php echo $row['image']; ?>" alt="">
 <?php
   }
   $conn->close();
@@ -33,10 +37,10 @@ $result = mysqli_query($conn, $sql);
   
 </div>
 
-  <p><b> Tell us something about Yourself </b></p>
+                           <p><b> Tell us something about Yourself </b></p>
 <?php
 $conn = mysqli_connect("localhost", "root", "WhateverPassword");
-mysqli_select_db($conn,'registrationform');
+mysqli_select_db($conn,'registration-system');
 $mail=$_SESSION['email'];
 $sql = "SELECT * FROM signup WHERE email = '$mail'";
 $result = mysqli_query($conn, $sql);
@@ -47,7 +51,6 @@ $result = mysqli_query($conn, $sql);
   }
   $conn->close();
 ?>
-  
          </div>
                     </div>
                     <div class="col-md-6">
@@ -75,7 +78,7 @@ $result = mysqli_query($conn, $sql);
 
   <br>
   
-
+    
   <thread>
   <th>Username : </th> <br>
   <th>First Name :   </th> <br>
@@ -93,19 +96,19 @@ $result = mysqli_query($conn, $sql);
 
 <?php
 $conn = mysqli_connect("localhost", "root", "WhateverPassword");
-mysqli_select_db($conn,'registrationform');
+mysqli_select_db($conn,'registration-system');
 $mail=$_SESSION['email'];
 $sql = "SELECT * FROM signup WHERE email = '$mail'";
 $result = mysqli_query($conn, $sql);
   while($row = mysqli_fetch_array($result)) {
  ?> 
 <tr>
-
-<td> <h7 style ="text-align:right;"><?php echo $row['username']; ?> </td> <br>
+<div class="col-md-6">
+<td> <?php echo $row['username']; ?> </td> <br>
 <td> <?php echo $row['firstName']; ?> </td> <br>
 <td> <?php echo $row['lastName']; ?> </td> <br>
 <td><?php echo $row['email']; ?> </td> <br>
-<td><?php echo $row['dob']; ?></td> <br>
+<td><?php echo $row['dob']; ?> </td> <br>
 <td><?php echo $row['country']; ?> </td> <br>
 <td><?php echo $row['gender']; ?> </td> <br>
 <td><?php echo $row['address']; ?> </td> <br>
@@ -119,3 +122,6 @@ $result = mysqli_query($conn, $sql);
   }
 $conn->close();
 ?>
+
+
+

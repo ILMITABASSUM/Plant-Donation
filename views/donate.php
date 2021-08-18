@@ -1,6 +1,7 @@
 <?php 
-    include_once 'userheader.php'
+    include_once 'includes/userHeader.php'
 ?>
+
 
 <br>
 <div class="container">
@@ -36,7 +37,7 @@
 	<div class="form-group">
 		<label for="cardNumber">Card number</label>
 		<div class="input-group">
-			<input type="text" class="form-control" name="cardNumber" placeholder="">
+			<input type="text" class="form-control" name="creditcardNo" placeholder="">
 			<div class="input-group-append">
 				<span class="input-group-text text-muted">
 					<i class="fab fa-cc-visa"></i>   <i class="fab fa-cc-amex"></i>   
@@ -49,7 +50,7 @@
 				<div class="row">
     <div class="col-sm-8">
         <div class="form-group">
-            <label><span class="hidden-xs">Expiration</span> </label>
+            <label><span class="hidden-xs" name="creditMonth">Expiration</span> </label>
         	<div class="form-inline">
         		<select class="form-control" style="width:45%">
 				  <option>MM</option>
@@ -67,7 +68,7 @@
 				  <option>12 - December</option>
 				</select>
 	            <span style="width:10%; text-align: center"> / </span>
-	            <select class="form-control" style="width:45%">
+	            <select class="form-control" name="creditYear" style="width:45%">
 				  <option>YY</option>
 				  <option>2021</option>
 				  <option>2020</option>

@@ -1,6 +1,6 @@
 
 <?php 
-    include_once 'userheader.php'
+    include_once 'includes/userHeader.php'
 ?>
 
 <!DOCTYPE html>
@@ -42,14 +42,14 @@
 	<div class="input-group-prepend">
 		<span class="input-group-text"><i class="fa fa-credit-card"></i></span>
 	</div>
-	<input type="text" class="form-control" name="cardNumber" placeholder="">
+	<input type="text" class="form-control" name="paypalcardNo" placeholder="">
 </div> 
 </div> 
 
 <div class="row">
     <div class="col-sm-8">
         <div class="form-group">
-            <label><span class="hidden-xs">Expiration</span> </label>
+            <label><span class="hidden-xs" name= "paypalMonth" >Expiration</span> </label>
         	<div class="form-inline">
         		<select class="form-control" style="width:45%">
 				  <option>MM</option>
@@ -67,7 +67,7 @@
 				  <option>12 - December</option>
 				</select>
 	            <span style="width:10%; text-align: center"> / </span>
-	            <select class="form-control" style="width:45%">
+	            <select class="form-control" name= "paypalYear" style="width:45%">
 				  <option>YY</option>
 				  <option>2021</option>
 				  <option>2020</option>

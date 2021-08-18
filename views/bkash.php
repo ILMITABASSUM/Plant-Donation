@@ -1,6 +1,6 @@
-
 <?php 
-    include_once 'userheader.php'
+    include_once 'includes/userHeader.php';
+	include_once '../helpers/session_helper.php';
 ?>
 <br>
 <!DOCTYPE html>
@@ -37,18 +37,16 @@
 
 
 
-
-<form role="form">
-
-
-
-<div class="form-group">
+<?php flash('payment') ?>
+   
+    <form method="post" class="form-inline" action="../controllers/paymentControler.php">
+        <input type="hidden" name="type" value="payment">
 <label for="cardNumber">Enter your Phone Number</label>
 <div class="input-group">
 	<div class="input-group-prepend">
 		<span class="input-group-text"><i class="fa fa-credit-card"></i></span>
 	</div>
-	<input type="text" class="form-control" name="cardNumber" placeholder="">
+	<input type="text" class="form-control" name="BphoneNum" placeholder="phone number">
 </div> 
 </div> 
 
@@ -67,7 +65,11 @@
         </div> 
     </div>
 </div> 
-<button class="subscribe btn btn-primary btn-block" type="button"> Confirm  </button>
+</div>
+
+<button type="submit" name="submit">Submit</button>
+</div>
+<!-- <button class="subscribe btn btn-primary btn-block" type="button"> Confirm  </button> -->
 </form>
 </div> 
 </article> 

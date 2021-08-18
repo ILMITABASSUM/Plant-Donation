@@ -1,38 +1,64 @@
 
-<html lang="en" dir="ltr">
-   <head>
-      <meta charset="utf-8">
-      <title> Login Form</title>
-      <link rel="stylesheet" type="text/css" href="style.css">
-     
+<?php 
+      include_once './includes/header.php';
+    include_once '../helpers/session_helper.php';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-   </head>
-   <body>
-      <div class="bg-img">
-         <div class="content">
-            <header>Login Form</header>
-            <form action="../controller/validation.php" method = "post" class="was-validated">
-               <div class="field">
-                  <span class="fa fa-user"></span>
-                  <!-- <input type="text" required placeholder="Email or Phone"> -->
-                  <input type ="text" name ="email" autocomplete= "off" required placeholder="Email">
-               </div>
+</head>
+
+<body>
+<div class="col-sm-6 col-md-12 col-lg-12 col-12">
+<div class="bg-img">
+<div class="content">
+    <h1 class="header"> Login</h1>
+<br>
+    <?php flash('login') ?>
+
+    <form method="post" action="../controllers/Users.php">
+    <input type="hidden" name="type" value="login">
+ <div class="field">
+    <span class="fa fa-user"></span>
+        <input type="text" name="name/email"  
+        placeholder="Username/Email">
+        </div>
                <div class="field space">
-                  <span class="fa fa-lock"></span>
-                  <input type="password" name = "password" class="pass-key" required placeholder="Password">
-                  <span class="show">SHOW</span>
+            <span class="fa fa-lock"></span>
+        <input type="password" name="usersPwd" class="pass-key"
+        placeholder="Password">
+        <span class="show">SHOW</span>
+       
                </div>
                <div class="pass">
-                  <a href="#">Forgot Password?</a>
+
+               <div class="form-sub-msg"><a href="./reset-password.php">Forgotten Password?</a></div>
                </div>
                <div class="field">
-                  <input type="submit" value="LOGIN">
+                  <input  type="submit" value="LOGIN">
                </div>
-            </form>
+       
             
             <div class="LogIn">
-               Don't have an account?
-               <a class="btn btn-success" type = "button" href="signUp.php">SignUp</a>
+                <br>
+        
+              <h3> Don't have an account? </h3>
+              <br>
+            
+              <button id="hello"><h5> <a href="signup.php">Sign Up  </h5></button></a>
+               </div>
+       
             </div>
          </div>
       </div>
@@ -53,3 +79,7 @@
       </script>
    </body>
 </html>
+
+   
+
+  
