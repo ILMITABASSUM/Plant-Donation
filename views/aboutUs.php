@@ -1,5 +1,5 @@
 <?php 
-        include_once 'includes/visitorheader.php'
+    include_once './includes/userHeader.php'
 ?>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="./css/about.css">
@@ -101,8 +101,6 @@
 </section>
 <div class="content active">
 <p align =center>For Further information Visit <a href="ourWork.php">Our WORK</a>
-                        </p>
-                
-      
-
+<br>
+</ul>
     

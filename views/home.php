@@ -9,14 +9,17 @@
       <video class="video-slide" src="4.mp4" autoplay muted loop></video>
       <video class="video-slide" src="5.mp4" autoplay muted loop></video>
       <div class="content active">
-        <h1>We Can<br><span>Save Plant Save Planet!</span></h1>
+        <h1>We Can</h1>
+         
+        <h2><span> Save Plant Save Planet!</span></h2>
+        <br>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <a href="signup.php">Read More</a>
       </div>
       <div class="content">
-        <h1>Donate Money<br><span>Buy Coins!</span></h1>
+        <h1>Donate Money<br><span>Get Coins!</span></h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <a href="#">Read More</a>
+        <a href="signup.php">Read More</a>
       </div>
       <div class="content">
         <h1>View Plant Feed<br><span></span></h1>
@@ -24,12 +27,14 @@
         <a href="#">Read More</a>
       </div>
       <div class="content">
-        <h1>We can<br><span>Bring Change Together</span></h1>
+        <h1>We can</h1>
+        <h2><span>Bring Change Together</span></h2>
+        <br>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <a href="#">Read More</a>
       </div>
       <div class="content">
-        <h1>Feel Nature.<br><span>Relax</span></h1>
+        <h1>Feel Nature!<br><span>Relax</span></h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <a href="#">Read More</a>
       </div>

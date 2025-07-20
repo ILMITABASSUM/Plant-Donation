@@ -1,8 +1,7 @@
-
 <?php 
 session_start();
 error_reporting(0);
-require_once '../libraries/Database.php';
+include('includes/config.php');
 
     ?>
 
@@ -22,14 +21,14 @@ require_once '../libraries/Database.php';
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="./css/feed.css" rel="stylesheet">
+    <link href="css/modern-business.css" rel="stylesheet">
 
   </head>
 
   <body>
 
     <!-- Navigation -->
-   <?php include('./includes/header.php');?>
+   <?php include('includes/header.php');?>
 
     <!-- Page Content -->
     <div class="container">
@@ -109,6 +108,7 @@ while ($row=mysqli_fetch_array($query)) {
 
       
 
+          <!-- Pagination -->
 
 
 

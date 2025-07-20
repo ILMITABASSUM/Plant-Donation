@@ -25,6 +25,9 @@ session_start();
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<a class="navbar-brand" href="index.php"><img src="images/logo.jpg" height="50" alt="AvatarS" class="img-circle user-img"> </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
   <a class="navbar-brand" href="index.php">Save Plant Save Planet</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -42,7 +45,7 @@ session_start();
   <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.php">Home</a>
+              <a class="nav-link" href="index.php">NewsFeed</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.php">About</a>
@@ -53,9 +56,7 @@ session_start();
                  <li class="nav-item">
               <a class="nav-link" href="buyCoins.php">Donate</a>
             </li>
-             <li class="nav-item">
-              <a class="nav-link" href="userProfile.php">User Profile</a>
-            </li>
+           
   <li>
   <a class="nav-link" a href="../controllers/Users.php?q=logout">Logout</a>
 </li>

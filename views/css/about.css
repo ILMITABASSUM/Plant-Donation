@@ -274,3 +274,6 @@ background: #acc2fe;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
+  .user-img {
+    border-radius: 50%;
+  }

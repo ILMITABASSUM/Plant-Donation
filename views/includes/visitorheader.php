@@ -23,7 +23,7 @@ session_start();
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="index.php">Save Plant Save Planet</a>
+  <a class="navbar-brand" href="home.php">Save Plant Save Planet</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
@@ -35,7 +35,7 @@ session_start();
               <a class="nav-link" href="home.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.php">About</a>
+              <a class="nav-link" href="aboutUs.php">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contactUs.php">Contact Us</a>
